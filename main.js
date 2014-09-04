@@ -3,21 +3,15 @@ function init() {
 	document.getElementById("f_to_c").onclick = faren;
 	
 	function celsius() {
-		var C = document.getElementById("to_faren").value;
-		F = (C * 1.8) + 32;
-		console.log(F);
-		cSolution();
+		var c = document.getElementById("to_faren").value;
+		var f = (c * 1.8) + 32;
+		document.getElementById("C_answer").innerHTML = f;
 	}
+
 	function faren() {
-		var F = document.getElementById("toCelsius").value;
-		C = (F - 32) / 1.8;
-		fSolution();
-	}
-	function cSolution() {
-		document.getElementById("C_answer").innerHTML = F;
-	}
-	function fSolution() {
-		document.getElementById("F_answer").innerHTML = C;
+		var f = document.getElementById("toCelsius").value;
+		var c = (f - 32) / 1.8;
+		document.getElementById("F_answer").innerHTML = c;
 	}
 };
 
